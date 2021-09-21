@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import '@mapbox/mapbox-gl-geocoder/lib/mapbox-gl-geocoder.css';
+  import '@maplibre/maplibre-gl-geocoder/lib/maplibre-gl-geocoder.css';
 
   export default {
     name: 'MapboxGeocoderDemoWithoutMap',

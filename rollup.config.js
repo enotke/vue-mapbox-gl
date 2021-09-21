@@ -49,8 +49,8 @@ const baseConfig = {
 // Refer to https://rollupjs.org/guide/en#output-globals for details
 const globals = {
   vue: 'Vue',
-  'mapbox-gl': 'mapboxgl',
-  '@mapbox/mapbox-gl-geocoder': 'MapboxGeocoder',
+  'maplibre-gl': 'maplibregl',
+  '@maplibre/maplibre-gl-geocoder': 'MapboxGeocoder',
 };
 
 const getEsConfig = (input, output = null) => ({
