@@ -10,11 +10,6 @@ const globEntry = require('webpack-glob-entry');
 const css = require('rollup-plugin-css-only');
 
 // Get browserslist config and remove ie from es build targets
-const esbrowserslist = fs
-  .readFileSync('./.browserslistrc')
-  .toString()
-  .split('\n')
-  .filter((entry) => entry && entry.substring(0, 2) !== 'ie');
 
 const baseConfig = {
   input: 'src/index.js',
@@ -73,15 +68,6 @@ const getEsConfig = (input, output = null) => ({
     ...baseConfig.plugins.postVue,
     babel({
       ...baseConfig.plugins.babel,
-      presets: [
-        [
-          '@babel/preset-env',
-          {
-            targets: esbrowserslist,
-            modules: false,
-          },
-        ],
-      ],
     }),
     commonjs(),
   ],
