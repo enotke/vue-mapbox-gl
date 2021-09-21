@@ -4,7 +4,7 @@
 
 <script>
   import maplibre from 'maplibre-gl';
-  import MapboxGeocoder from '@maplibre/maplibre-gl-geocoder';
+  import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
   import { injectMap } from '../mixins/provide-inject-map';
   import { bindEvents, unbindEvents } from '../utils/bind-events';
 

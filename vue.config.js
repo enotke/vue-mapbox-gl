@@ -4,15 +4,15 @@ module.exports = {
       extensions: ['.vue', '.js', '.json'],
     },
     externals: {
-      'maplibre-gl': {
-        commonjs: 'maplibre-gl',
-        commonjs2: 'maplibre-gl',
+      'mapbox-gl': {
+        commonjs: 'mapbox-gl',
+        commonjs2: 'mapbox-gl',
         amd: 'mapboxgl',
         root: 'mapboxgl',
       },
-      '@maplibre/maplibre-gl-geocoder': {
-        commonjs: '@maplibre/maplibre-gl-geocoder',
-        commonjs2: '@maplibre/maplibre-gl-geocoder',
+      '@mapbox/mapbox-gl-geocoder': {
+        commonjs: '@mapbox/mapbox-gl-geocoder',
+        commonjs2: '@mapbox/mapbox-gl-geocoder',
         amd: 'MapboxGeocoder',
         root: 'MapboxGeocoder',
       },

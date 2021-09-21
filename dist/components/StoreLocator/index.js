@@ -11,7 +11,7 @@ import '../MapboxLayer.js';
 import '../../utils/bind-events.js';
 import '../MapboxSource.js';
 import '../../_chunks/maplibre-gl.b420778b.js';
-import 'events';
+import '@mapbox/mapbox-gl-geocoder';
 import '../../utils/bind-props.js';
 
 //

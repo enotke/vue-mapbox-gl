@@ -15,7 +15,7 @@ import '../mixins/provide-inject-map.js';
 import '../_chunks/normalize-component.d57baabe.js';
 import '../_chunks/maplibre-gl.b420778b.js';
 import '../_chunks/_commonjsHelpers.04bfb82e.js';
-import 'events';
+import '@mapbox/mapbox-gl-geocoder';
 import '../utils/bind-events.js';
 import '../_chunks/index.d84f178f.js';
 import '../utils/bind-props.js';
