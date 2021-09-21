@@ -18,7 +18,7 @@ const esbrowserslist = fs
 
 const baseConfig = {
   input: 'src/index.js',
-  external: ['vue', 'mapbox-gl', '@mapbox/mapbox-gl-geocoder'],
+  external: ['vue', 'maplibre-gl', '@maplibre/maplibre-gl-geocoder'],
   plugins: {
     preVue: [
       nodeResolve({
