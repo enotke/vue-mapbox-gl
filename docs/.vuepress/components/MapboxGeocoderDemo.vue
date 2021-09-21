@@ -12,7 +12,7 @@
 </template>
 
 <script>
-  require('@maplibre/maplibre-gl-geocoder/lib/maplibre-gl-geocoder.css')
+  require('@mapbox/mapbox-gl-geocoder/lib/mapbox-gl-geocoder.css')
 
   export default {
     name: 'MapboxGeocoderDemo',
