@@ -1,10 +1,9 @@
 import { a as _objectWithoutProperties } from '../_chunks/_rollupPluginBabelHelpers.c63527b4.js';
-import { m as maplibreGl } from '../_chunks/maplibre-gl.b420778b.js';
+import { Popup, LngLat, Point } from 'maplibre-gl';
 import bindProps from '../utils/bind-props.js';
 import { bindEvents, unbindEvents } from '../utils/bind-events.js';
 import { injectMap } from '../mixins/provide-inject-map.js';
 import { n as normalizeComponent } from '../_chunks/normalize-component.d57baabe.js';
-import '../_chunks/_commonjsHelpers.04bfb82e.js';
 
 var _excluded = ["lngLat"];
 /**
@@ -16,7 +15,7 @@ var _excluded = ["lngLat"];
 
 var props = {
   lngLat: {
-    type: [maplibreGl.LngLat, Array, Object],
+    type: [LngLat, Array, Object],
     required: true
   },
   closeButton: {
@@ -36,7 +35,7 @@ var props = {
     default: null
   },
   offset: {
-    type: [Number, maplibreGl.Point, Array, Object],
+    type: [Number, Point, Array, Object],
     default: null
   },
   className: {
@@ -84,7 +83,7 @@ var script = {
     }
   },
   mounted: function mounted() {
-    this.popup = new maplibreGl.Popup(this.options).setLngLat(this.lngLat).setDOMContent(this.$el);
+    this.popup = new Popup(this.options).setLngLat(this.lngLat).setDOMContent(this.$el);
 
     if (!this.renderless) {
       this.popup.addTo(this.map);
