@@ -1,10 +1,12 @@
-import { a as _objectWithoutProperties } from '../_chunks/_rollupPluginBabelHelpers.fa6f610a.js';
-import { injectMap } from '../mixins/provide-inject-map.js';
-import { bindEvents, unbindEvents } from '../utils/bind-events.js';
-import { n as normalizeComponent } from '../_chunks/normalize-component.d57baabe.js';
-import { Popup, LngLat, Point } from 'mapbox-gl';
+import { a as _objectWithoutProperties } from '../_chunks/_rollupPluginBabelHelpers.c63527b4.js';
+import { m as maplibreGl } from '../_chunks/maplibre-gl.b420778b.js';
 import bindProps from '../utils/bind-props.js';
+import { bindEvents, unbindEvents } from '../utils/bind-events.js';
+import { injectMap } from '../mixins/provide-inject-map.js';
+import { n as normalizeComponent } from '../_chunks/normalize-component.d57baabe.js';
+import '../_chunks/_commonjsHelpers.04bfb82e.js';
 
+var _excluded = ["lngLat"];
 /**
  * Component's props definition, we need to declare it outside the component
  * to be able to test the default values and the types.
@@ -14,7 +16,7 @@ import bindProps from '../utils/bind-props.js';
 
 var props = {
   lngLat: {
-    type: [LngLat, Array, Object],
+    type: [maplibreGl.LngLat, Array, Object],
     required: true
   },
   closeButton: {
@@ -34,7 +36,7 @@ var props = {
     default: null
   },
   offset: {
-    type: [Number, Point, Array, Object],
+    type: [Number, maplibreGl.Point, Array, Object],
     default: null
   },
   className: {
@@ -74,15 +76,15 @@ var script = {
   },
   computed: {
     options: function options() {
-      var _this$$props = this.$props,
-          lngLat = _this$$props.lngLat,
-          options = _objectWithoutProperties(_this$$props, ["lngLat"]);
+      var _this$$props = this.$props;
+          _this$$props.lngLat;
+          var options = _objectWithoutProperties(_this$$props, _excluded);
 
       return options;
     }
   },
   mounted: function mounted() {
-    this.popup = new Popup(this.options).setLngLat(this.lngLat).setDOMContent(this.$el);
+    this.popup = new maplibreGl.Popup(this.options).setLngLat(this.lngLat).setDOMContent(this.$el);
 
     if (!this.renderless) {
       this.popup.addTo(this.map);
@@ -138,5 +140,5 @@ var __vue_component__ = /*#__PURE__*/normalizeComponent({
   staticRenderFns: __vue_staticRenderFns__
 }, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, undefined, undefined, undefined);
 
-export default __vue_component__;
+export { __vue_component__ as default };
 //# sourceMappingURL=MapboxPopup.js.map

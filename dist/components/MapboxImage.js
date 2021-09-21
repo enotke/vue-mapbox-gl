@@ -1,7 +1,8 @@
-import { c as _asyncToGenerator } from '../_chunks/_rollupPluginBabelHelpers.fa6f610a.js';
+import { c as _asyncToGenerator } from '../_chunks/_rollupPluginBabelHelpers.c63527b4.js';
+import { r as regenerator } from '../_chunks/index.d84f178f.js';
 import { injectMap } from '../mixins/provide-inject-map.js';
 import { n as normalizeComponent } from '../_chunks/normalize-component.d57baabe.js';
-import { r as regenerator } from '../_chunks/index.20ce9193.js';
+import '../_chunks/_commonjsHelpers.04bfb82e.js';
 
 var script = {
   name: 'MapboxImage',
@@ -192,5 +193,5 @@ var __vue_component__ = /*#__PURE__*/normalizeComponent({
   staticRenderFns: __vue_staticRenderFns__
 }, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, undefined, undefined, undefined);
 
-export default __vue_component__;
+export { __vue_component__ as default };
 //# sourceMappingURL=MapboxImage.js.map

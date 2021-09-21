@@ -1,4 +1,4 @@
-import { _ as _slicedToArray } from '../_chunks/_rollupPluginBabelHelpers.fa6f610a.js';
+import { _ as _slicedToArray } from '../_chunks/_rollupPluginBabelHelpers.c63527b4.js';
 
 /**
  * Map a mapbox element's events to the given vue element

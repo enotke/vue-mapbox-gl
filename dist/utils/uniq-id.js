@@ -9,5 +9,5 @@ function uniqId() {
   return prefix ? prefix + uniq.toString(16) : uniq.toString(16);
 }
 
-export default uniqId;
+export { uniqId as default };
 //# sourceMappingURL=uniq-id.js.map

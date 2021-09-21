@@ -1,13 +1,14 @@
-import '../_chunks/_rollupPluginBabelHelpers.fa6f610a.js';
+import { m as maplibreGl } from '../_chunks/maplibre-gl.b420778b.js';
 import { injectMap } from '../mixins/provide-inject-map.js';
+import bindProps from '../utils/bind-props.js';
 import { bindEvents, unbindEvents } from '../utils/bind-events.js';
 import { n as normalizeComponent } from '../_chunks/normalize-component.d57baabe.js';
-import mapboxgl from 'mapbox-gl';
-import bindProps from '../utils/bind-props.js';
+import '../_chunks/_commonjsHelpers.04bfb82e.js';
+import '../_chunks/_rollupPluginBabelHelpers.c63527b4.js';
 
 //
 
-if (!mapboxgl) {
+if (!maplibreGl) {
   throw new Error('mapboxgl is not installed.');
 }
 /**
@@ -66,7 +67,7 @@ var script = {
   mixins: [injectMap()],
   props: props,
   mounted: function mounted() {
-    this.control = new mapboxgl.GeolocateControl(this.$props); // Bind props and events
+    this.control = new maplibreGl.GeolocateControl(this.$props); // Bind props and events
 
     bindProps(this, this.control, props);
     bindEvents(this, this.control, events); // Add GeolocationControl to the map
@@ -119,5 +120,5 @@ var __vue_component__ = /*#__PURE__*/normalizeComponent({
   staticRenderFns: __vue_staticRenderFns__
 }, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, undefined, undefined, undefined);
 
-export default __vue_component__;
+export { __vue_component__ as default };
 //# sourceMappingURL=MapboxGeolocateControl.js.map

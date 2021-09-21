@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-  import { Popup, Point, LngLat } from 'mapbox-gl';
+  import { Popup, Point, LngLat } from 'maplibre-gl';
   import bindProps from '../utils/bind-props';
   import { bindEvents, unbindEvents } from '../utils/bind-events';
   import { injectMap } from '../mixins/provide-inject-map';

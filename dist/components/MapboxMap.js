@@ -1,11 +1,14 @@
-import { a as _objectWithoutProperties, b as _objectSpread2 } from '../_chunks/_rollupPluginBabelHelpers.fa6f610a.js';
-import { provideMap } from '../mixins/provide-inject-map.js';
-import { bindEvents, unbindEvents } from '../utils/bind-events.js';
-import { n as normalizeComponent } from '../_chunks/normalize-component.d57baabe.js';
-import mapboxgl, { LngLatBounds, LngLat } from 'mapbox-gl';
+import { a as _objectWithoutProperties, b as _objectSpread2 } from '../_chunks/_rollupPluginBabelHelpers.c63527b4.js';
+import { m as maplibreGl } from '../_chunks/maplibre-gl.b420778b.js';
 import bindProps from '../utils/bind-props.js';
+import { bindEvents, unbindEvents } from '../utils/bind-events.js';
+import { provideMap } from '../mixins/provide-inject-map.js';
+import { n as normalizeComponent } from '../_chunks/normalize-component.d57baabe.js';
+import '../_chunks/_commonjsHelpers.04bfb82e.js';
 
-if (!mapboxgl) {
+var _excluded = ["accessToken", "mapStyle"];
+
+if (!maplibreGl) {
   throw new Error('mapboxgl is not installed.');
 }
 /**
@@ -94,7 +97,7 @@ var props = {
     default: true
   },
   maxBounds: {
-    type: [LngLatBounds, Array],
+    type: [maplibreGl.LngLatBounds, Array],
     default: undefined
   },
   scrollZoom: {
@@ -130,7 +133,7 @@ var props = {
     default: true
   },
   center: {
-    type: [LngLat, Array, Object],
+    type: [maplibreGl.LngLat, Array, Object],
     default: function _default() {
       return [0, 0];
     }
@@ -148,7 +151,7 @@ var props = {
     default: 0
   },
   bounds: {
-    type: [LngLatBounds, Array],
+    type: [maplibreGl.LngLatBounds, Array],
     default: undefined
   },
   fitBoundsOptions: {
@@ -202,10 +205,10 @@ var script = {
   },
   computed: {
     options: function options() {
-      var _this$$props = this.$props,
-          accessToken = _this$$props.accessToken,
-          style = _this$$props.mapStyle,
-          options = _objectWithoutProperties(_this$$props, ["accessToken", "mapStyle"]); // Use current component's element if container is not set
+      var _this$$props = this.$props;
+          _this$$props.accessToken;
+          var style = _this$$props.mapStyle,
+          options = _objectWithoutProperties(_this$$props, _excluded); // Use current component's element if container is not set
 
 
       if (!options.container && this.$el) {
@@ -220,8 +223,8 @@ var script = {
   mounted: function mounted() {
     var _this = this;
 
-    mapboxgl.accessToken = this.accessToken;
-    this.map = new mapboxgl.Map(this.options);
+    maplibreGl.accessToken = this.accessToken;
+    this.map = new maplibreGl.Map(this.options);
     this.map.on('load', function () {
       _this.isLoaded = true;
     }); // Bind props and events
@@ -293,5 +296,5 @@ var __vue_component__ = /*#__PURE__*/normalizeComponent({
   staticRenderFns: __vue_staticRenderFns__
 }, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, undefined, undefined, undefined);
 
-export default __vue_component__;
+export { __vue_component__ as default };
 //# sourceMappingURL=MapboxMap.js.map

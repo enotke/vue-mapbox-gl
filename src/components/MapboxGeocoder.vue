@@ -3,12 +3,12 @@
 </template>
 
 <script>
-  import mapboxgl from 'mapbox-gl';
+  import maplibre from 'maplibre-gl';
   import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
   import { injectMap } from '../mixins/provide-inject-map';
   import { bindEvents, unbindEvents } from '../utils/bind-events';
 
-  if (!mapboxgl) {
+  if (!maplibre) {
     throw new Error('mapboxgl is not installed.');
   }
 
@@ -156,8 +156,8 @@
       }
 
       this.control = new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken || accessToken,
-        mapboxgl,
+        accessToken: maplibre.accessToken || accessToken,
+        maplibre,
         ...$props,
       });
 

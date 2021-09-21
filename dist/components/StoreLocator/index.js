@@ -1,17 +1,18 @@
-import { c as _asyncToGenerator, a as _objectWithoutProperties, b as _objectSpread2 } from '../../_chunks/_rollupPluginBabelHelpers.fa6f610a.js';
+import { c as _asyncToGenerator, a as _objectWithoutProperties, b as _objectSpread2 } from '../../_chunks/_rollupPluginBabelHelpers.c63527b4.js';
+import { r as regenerator } from '../../_chunks/index.d84f178f.js';
+import __vue_component__$2 from '../MapboxCluster.js';
+import __vue_component__$3 from '../MapboxGeocoder.js';
+import __vue_component__$4 from '../MapboxMap.js';
+import { n as normalizeComponent } from '../../_chunks/normalize-component.d57baabe.js';
+import '../../_chunks/_commonjsHelpers.04bfb82e.js';
 import '../../utils/uniq-id.js';
 import '../../mixins/provide-inject-map.js';
-import '../../utils/bind-events.js';
 import '../MapboxLayer.js';
-import { n as normalizeComponent } from '../../_chunks/normalize-component.d57baabe.js';
+import '../../utils/bind-events.js';
 import '../MapboxSource.js';
-import __vue_component__$2 from '../MapboxCluster.js';
-import 'mapbox-gl';
+import '../../_chunks/maplibre-gl.b420778b.js';
 import '@mapbox/mapbox-gl-geocoder';
-import __vue_component__$3 from '../MapboxGeocoder.js';
-import { r as regenerator } from '../../_chunks/index.20ce9193.js';
 import '../../utils/bind-props.js';
-import __vue_component__$4 from '../MapboxMap.js';
 
 //
 //
@@ -30,7 +31,7 @@ import __vue_component__$4 from '../MapboxMap.js';
 //
 //
 //
-var script = {
+var script$1 = {
   data: function data() {
     return {
       scrollTop: 0,
@@ -104,10 +105,10 @@ var script = {
 };
 
 /* script */
-var __vue_script__ = script;
+var __vue_script__$1 = script$1;
 /* template */
 
-var __vue_render__ = function __vue_render__() {
+var __vue_render__$1 = function __vue_render__() {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -129,36 +130,37 @@ var __vue_render__ = function __vue_render__() {
   }, [_vm._t("default")], 2)])]);
 };
 
-var __vue_staticRenderFns__ = [];
+var __vue_staticRenderFns__$1 = [];
 /* style */
 
-var __vue_inject_styles__ = undefined;
+var __vue_inject_styles__$1 = undefined;
 /* scoped */
 
-var __vue_scope_id__ = undefined;
+var __vue_scope_id__$1 = undefined;
 /* module identifier */
 
-var __vue_module_identifier__ = undefined;
+var __vue_module_identifier__$1 = undefined;
 /* functional template */
 
-var __vue_is_functional_template__ = false;
+var __vue_is_functional_template__$1 = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-var __vue_component__ = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__,
-  staticRenderFns: __vue_staticRenderFns__
-}, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, undefined, undefined, undefined);
+var __vue_component__$1 = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$1,
+  staticRenderFns: __vue_staticRenderFns__$1
+}, __vue_inject_styles__$1, __vue_script__$1, __vue_scope_id__$1, __vue_is_functional_template__$1, __vue_module_identifier__$1, false, undefined, undefined, undefined);
 
-var script$1 = {
+var _excluded = ["lat", "lng"];
+var script = {
   components: {
     MapboxCluster: __vue_component__$2,
     MapboxGeocoder: __vue_component__$3,
     MapboxMap: __vue_component__$4,
-    VueScroller: __vue_component__
+    VueScroller: __vue_component__$1
   },
   props: {
     /**
@@ -316,7 +318,7 @@ var script$1 = {
     itemToGeoJsonFeature: function itemToGeoJsonFeature(_ref) {
       var lat = _ref.lat,
           lng = _ref.lng,
-          properties = _objectWithoutProperties(_ref, ["lat", "lng"]);
+          properties = _objectWithoutProperties(_ref, _excluded);
 
       return {
         type: 'Feature',
@@ -568,10 +570,10 @@ var script$1 = {
 };
 
 /* script */
-var __vue_script__$1 = script$1;
+var __vue_script__ = script;
 /* template */
 
-var __vue_render__$1 = function __vue_render__() {
+var __vue_render__ = function __vue_render__() {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -582,7 +584,11 @@ var __vue_render__$1 = function __vue_render__() {
     class: _vm.classes.root || {}
   }, [_c('div', {
     class: (_vm.classes.region || {}).map || {}
-  }, [_vm.isLoading ? [_c('transition', _vm._b({}, 'transition', (_vm.transitions.loader || {}).map || {}, false), [_vm._t("map-loader", [_c('transition', _vm._b({}, 'transition', (_vm.transitions.loader || {}).default || {}, false), [_vm._t("loader", [_vm._v("\n              Loading...\n            ")])], 2)])], 2)] : _vm._e(), _vm._v(" "), _vm._t("before-map"), _vm._v(" "), _c('mapbox-map', _vm._b({
+  }, [_vm.isLoading ? [_c('transition', _vm._b({}, 'transition', (_vm.transitions.loader || {}).map || {}, false), [_vm._t("map-loader", function () {
+    return [_c('transition', _vm._b({}, 'transition', (_vm.transitions.loader || {}).default || {}, false), [_vm._t("loader", function () {
+      return [_vm._v("\n              Loading...\n            ")];
+    })], 2)];
+  })], 2)] : _vm._e(), _vm._v(" "), _vm._t("before-map"), _vm._v(" "), _c('mapbox-map', _vm._b({
     class: _vm.classes.map || {},
     on: {
       "mb-created": _vm.onMapCreated,
@@ -610,7 +616,11 @@ var __vue_render__$1 = function __vue_render__() {
     "selectedItem": _vm.selectedItem
   })], 2), _vm._v(" "), _vm._t("after-map")], 2), _vm._v(" "), _c('div', {
     class: (_vm.classes.region || {}).search || {}
-  }, [_vm.isLoading ? [_c('transition', _vm._b({}, 'transition', (_vm.transitions.loader || {}).search || {}, false), [_vm._t("search-loader", [_c('transition', _vm._b({}, 'transition', (_vm.transitions.loader || {}).default || {}, false), [_vm._t("loader", [_vm._v("\n              Loading...\n            ")])], 2)])], 2)] : _vm._e(), _vm._v(" "), _vm._t("before-search", null, {
+  }, [_vm.isLoading ? [_c('transition', _vm._b({}, 'transition', (_vm.transitions.loader || {}).search || {}, false), [_vm._t("search-loader", function () {
+    return [_c('transition', _vm._b({}, 'transition', (_vm.transitions.loader || {}).default || {}, false), [_vm._t("loader", function () {
+      return [_vm._v("\n              Loading...\n            ")];
+    })], 2)];
+  })], 2)] : _vm._e(), _vm._v(" "), _vm._t("before-search", null, {
     "items": _vm.items,
     "filteredItems": _vm.filteredItems,
     "selectedItem": _vm.selectedItem
@@ -628,7 +638,13 @@ var __vue_render__$1 = function __vue_render__() {
     "selectedItem": _vm.selectedItem
   })], 2), _vm._v(" "), _c('div', {
     class: (_vm.classes.region || {}).list || {}
-  }, [_vm.isLoading || _vm.listIsLoading ? [_c('transition', _vm._b({}, 'transition', (_vm.transitions.loader || {}).list || {}, false), [_vm._t("list-loader", [_c('transition', _vm._b({}, 'transition', (_vm.transitions.loader || {}).default || {}, false), [_vm._t("loader", [_vm._v("\n              Loading...\n            ")])], 2)])], 2)] : [_vm._t("before-list", [_c('p', [_vm._v("Result(s): " + _vm._s(_vm.filteredItems.length.toFixed(0)))])], {
+  }, [_vm.isLoading || _vm.listIsLoading ? [_c('transition', _vm._b({}, 'transition', (_vm.transitions.loader || {}).list || {}, false), [_vm._t("list-loader", function () {
+    return [_c('transition', _vm._b({}, 'transition', (_vm.transitions.loader || {}).default || {}, false), [_vm._t("loader", function () {
+      return [_vm._v("\n              Loading...\n            ")];
+    })], 2)];
+  })], 2)] : [_vm._t("before-list", function () {
+    return [_c('p', [_vm._v("Result(s): " + _vm._s(_vm.filteredItems.length.toFixed(0)))])];
+  }, {
     "items": _vm.items,
     "filteredItems": _vm.filteredItems,
     "selectedItem": _vm.selectedItem
@@ -643,7 +659,9 @@ var __vue_render__$1 = function __vue_render__() {
           return _vm.onListItemClick(item);
         }
       }
-    }, [_vm._t("list-item", [_vm._v("\n              Lat: " + _vm._s(item.lat) + " "), _c('br'), _vm._v("\n              Lng: " + _vm._s(item.lng) + "\n            ")], {
+    }, [_vm._t("list-item", function () {
+      return [_vm._v("\n              Lat: " + _vm._s(item.lat) + " "), _c('br'), _vm._v("\n              Lng: " + _vm._s(item.lng) + "\n            ")];
+    }, {
       "item": item,
       "index": index,
       "selectedItem": _vm.selectedItem
@@ -658,7 +676,9 @@ var __vue_render__$1 = function __vue_render__() {
   }, [_c('transition', _vm._b({}, 'transition', _vm.transitions.panel || {}, false), [_vm.selectedItem ? _c('div', {
     key: _vm.selectedItem.id,
     class: _vm.classes.panel || {}
-  }, [_vm._t("panel", [_c('div', [_vm._v(_vm._s(_vm.selectedItem))])], {
+  }, [_vm._t("panel", function () {
+    return [_c('div', [_vm._v(_vm._s(_vm.selectedItem))])];
+  }, {
     "item": _vm.selectedItem,
     "close": function close() {
       return _vm.selectedItem = null;
@@ -666,29 +686,29 @@ var __vue_render__$1 = function __vue_render__() {
   })], 2) : _vm._e()])], 1)]);
 };
 
-var __vue_staticRenderFns__$1 = [];
+var __vue_staticRenderFns__ = [];
 /* style */
 
-var __vue_inject_styles__$1 = undefined;
+var __vue_inject_styles__ = undefined;
 /* scoped */
 
-var __vue_scope_id__$1 = undefined;
+var __vue_scope_id__ = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$1 = undefined;
+var __vue_module_identifier__ = undefined;
 /* functional template */
 
-var __vue_is_functional_template__$1 = false;
+var __vue_is_functional_template__ = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-var __vue_component__$1 = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$1,
-  staticRenderFns: __vue_staticRenderFns__$1
-}, __vue_inject_styles__$1, __vue_script__$1, __vue_scope_id__$1, __vue_is_functional_template__$1, __vue_module_identifier__$1, false, undefined, undefined, undefined);
+var __vue_component__ = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__,
+  staticRenderFns: __vue_staticRenderFns__
+}, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, undefined, undefined, undefined);
 
-export default __vue_component__$1;
+export { __vue_component__ as default };
 //# sourceMappingURL=index.js.map

@@ -10,12 +10,12 @@
 </template>
 
 <script>
-  import mapboxgl, { LngLatBounds, LngLat } from 'mapbox-gl';
+  import maplibre, { LngLatBounds, LngLat } from 'maplibre-gl';
   import bindProps from '../utils/bind-props';
   import { bindEvents, unbindEvents } from '../utils/bind-events';
   import { provideMap } from '../mixins/provide-inject-map';
 
-  if (!mapboxgl) {
+  if (!maplibre) {
     throw new Error('mapboxgl is not installed.');
   }
 
@@ -270,8 +270,8 @@
       },
     },
     mounted() {
-      mapboxgl.accessToken = this.accessToken;
-      this.map = new mapboxgl.Map(this.options);
+      maplibre.accessToken = this.accessToken;
+      this.map = new maplibre.Map(this.options);
       this.map.on('load', () => {
         this.isLoaded = true;
       });

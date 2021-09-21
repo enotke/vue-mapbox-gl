@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import { Marker, Point } from 'mapbox-gl';
+  import { Marker, Point } from 'maplibre-gl';
   import { injectMap } from '../mixins/provide-inject-map';
   import bindProps from '../utils/bind-props';
   import { bindEvents, unbindEvents } from '../utils/bind-events';

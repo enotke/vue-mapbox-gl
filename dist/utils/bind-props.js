@@ -41,5 +41,5 @@ function bindProps(vueElement, mapboxElement, props) {
   });
 }
 
-export default bindProps;
+export { bindProps as default };
 //# sourceMappingURL=bind-props.js.map

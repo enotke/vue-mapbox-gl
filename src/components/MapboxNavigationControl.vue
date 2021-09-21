@@ -3,7 +3,7 @@
 </template>
 
 <script>
-  import { NavigationControl } from 'mapbox-gl';
+  import { NavigationControl } from 'maplibre-gl';
   import bindProps from '../utils/bind-props';
   import { injectMap } from '../mixins/provide-inject-map';
 

@@ -1,11 +1,14 @@
-import { a as _objectWithoutProperties, b as _objectSpread2 } from '../_chunks/_rollupPluginBabelHelpers.fa6f610a.js';
+import { a as _objectWithoutProperties, b as _objectSpread2 } from '../_chunks/_rollupPluginBabelHelpers.c63527b4.js';
+import { m as maplibreGl } from '../_chunks/maplibre-gl.b420778b.js';
+import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import { injectMap } from '../mixins/provide-inject-map.js';
 import { bindEvents, unbindEvents } from '../utils/bind-events.js';
 import { n as normalizeComponent } from '../_chunks/normalize-component.d57baabe.js';
-import mapboxgl from 'mapbox-gl';
-import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
+import '../_chunks/_commonjsHelpers.04bfb82e.js';
 
-if (!mapboxgl) {
+var _excluded = ["accessToken"];
+
+if (!maplibreGl) {
   throw new Error('mapboxgl is not installed.');
 }
 
@@ -170,7 +173,7 @@ var script = {
   mounted: function mounted() {
     var _this$$props = this.$props,
         accessToken = _this$$props.accessToken,
-        $props = _objectWithoutProperties(_this$$props, ["accessToken"]); // Delete the `reverseMode` property if we are not reverse geocoding as it is not supported by
+        $props = _objectWithoutProperties(_this$$props, _excluded); // Delete the `reverseMode` property if we are not reverse geocoding as it is not supported by
     // the Mapbox SDK.
     //
     // The `reverseMode` option can not be supported yet as it is conditionned by the search
@@ -193,8 +196,8 @@ var script = {
     }
 
     this.control = new MapboxGeocoder(_objectSpread2({
-      accessToken: mapboxgl.accessToken || accessToken,
-      mapboxgl: mapboxgl
+      accessToken: maplibreGl.accessToken || accessToken,
+      maplibre: maplibreGl
     }, $props)); // Bind events
 
     bindEvents(this, this.control, events);
@@ -248,5 +251,5 @@ var __vue_component__ = /*#__PURE__*/normalizeComponent({
   staticRenderFns: __vue_staticRenderFns__
 }, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, undefined, undefined, undefined);
 
-export default __vue_component__;
+export { __vue_component__ as default };
 //# sourceMappingURL=MapboxGeocoder.js.map

@@ -3,12 +3,12 @@
 </template>
 
 <script>
-  import mapboxgl from 'mapbox-gl';
+  import maplibre from 'maplibre-gl';
   import { injectMap } from '../mixins/provide-inject-map';
   import bindProps from '../utils/bind-props';
   import { bindEvents, unbindEvents } from '../utils/bind-events';
 
-  if (!mapboxgl) {
+  if (!maplibre) {
     throw new Error('mapboxgl is not installed.');
   }
 
@@ -64,7 +64,7 @@
     mixins: [ injectMap() ],
     props,
     mounted() {
-      this.control = new mapboxgl.GeolocateControl(this.$props);
+      this.control = new maplibre.GeolocateControl(this.$props);
 
       // Bind props and events
       bindProps(this, this.control, props);

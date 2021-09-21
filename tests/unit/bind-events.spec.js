@@ -1,6 +1,6 @@
 require('./URL.mock.js');
 const { mount } = require('@vue/test-utils');
-const { Marker } = require('mapbox-gl');
+const { Marker } = require('maplibre-gl');
 const { bindEvents, unbindEvents } = require('@/utils/bind-events');
 
 /** @type {Array} The list of events available on a marker */
