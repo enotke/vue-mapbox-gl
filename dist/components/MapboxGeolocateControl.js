@@ -1,13 +1,14 @@
-import maplibre from 'maplibre-gl';
+import { m as maplibreGl } from '../_chunks/maplibre-gl.b420778b.js';
 import { injectMap } from '../mixins/provide-inject-map.js';
 import bindProps from '../utils/bind-props.js';
 import { bindEvents, unbindEvents } from '../utils/bind-events.js';
 import { n as normalizeComponent } from '../_chunks/normalize-component.d57baabe.js';
+import '../_chunks/_commonjsHelpers.04bfb82e.js';
 import '../_chunks/_rollupPluginBabelHelpers.c63527b4.js';
 
 //
 
-if (!maplibre) {
+if (!maplibreGl) {
   throw new Error('mapboxgl is not installed.');
 }
 /**
@@ -66,7 +67,7 @@ var script = {
   mixins: [injectMap()],
   props: props,
   mounted: function mounted() {
-    this.control = new maplibre.GeolocateControl(this.$props); // Bind props and events
+    this.control = new maplibreGl.GeolocateControl(this.$props); // Bind props and events
 
     bindProps(this, this.control, props);
     bindEvents(this, this.control, events); // Add GeolocationControl to the map

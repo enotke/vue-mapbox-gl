@@ -1,7 +1,8 @@
 import { c as _asyncToGenerator } from '../_chunks/_rollupPluginBabelHelpers.c63527b4.js';
-import { r as regenerator } from '../_chunks/index.c9a38489.js';
+import { r as regenerator } from '../_chunks/index.d84f178f.js';
 import { injectMap } from '../mixins/provide-inject-map.js';
 import { n as normalizeComponent } from '../_chunks/normalize-component.d57baabe.js';
+import '../_chunks/_commonjsHelpers.04bfb82e.js';
 
 var script = {
   name: 'MapboxImage',

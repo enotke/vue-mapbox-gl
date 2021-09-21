@@ -1,13 +1,14 @@
 import { a as _objectWithoutProperties, b as _objectSpread2 } from '../_chunks/_rollupPluginBabelHelpers.c63527b4.js';
-import maplibre, { LngLatBounds, LngLat } from 'maplibre-gl';
+import { m as maplibreGl } from '../_chunks/maplibre-gl.b420778b.js';
 import bindProps from '../utils/bind-props.js';
 import { bindEvents, unbindEvents } from '../utils/bind-events.js';
 import { provideMap } from '../mixins/provide-inject-map.js';
 import { n as normalizeComponent } from '../_chunks/normalize-component.d57baabe.js';
+import '../_chunks/_commonjsHelpers.04bfb82e.js';
 
 var _excluded = ["accessToken", "mapStyle"];
 
-if (!maplibre) {
+if (!maplibreGl) {
   throw new Error('mapboxgl is not installed.');
 }
 /**
@@ -96,7 +97,7 @@ var props = {
     default: true
   },
   maxBounds: {
-    type: [LngLatBounds, Array],
+    type: [maplibreGl.LngLatBounds, Array],
     default: undefined
   },
   scrollZoom: {
@@ -132,7 +133,7 @@ var props = {
     default: true
   },
   center: {
-    type: [LngLat, Array, Object],
+    type: [maplibreGl.LngLat, Array, Object],
     default: function _default() {
       return [0, 0];
     }
@@ -150,7 +151,7 @@ var props = {
     default: 0
   },
   bounds: {
-    type: [LngLatBounds, Array],
+    type: [maplibreGl.LngLatBounds, Array],
     default: undefined
   },
   fitBoundsOptions: {
@@ -222,8 +223,8 @@ var script = {
   mounted: function mounted() {
     var _this = this;
 
-    maplibre.accessToken = this.accessToken;
-    this.map = new maplibre.Map(this.options);
+    maplibreGl.accessToken = this.accessToken;
+    this.map = new maplibreGl.Map(this.options);
     this.map.on('load', function () {
       _this.isLoaded = true;
     }); // Bind props and events

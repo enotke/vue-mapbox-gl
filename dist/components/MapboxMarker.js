@@ -1,10 +1,11 @@
 import { b as _objectSpread2, a as _objectWithoutProperties } from '../_chunks/_rollupPluginBabelHelpers.c63527b4.js';
-import { Marker, Point } from 'maplibre-gl';
+import { m as maplibreGl } from '../_chunks/maplibre-gl.b420778b.js';
 import { injectMap } from '../mixins/provide-inject-map.js';
 import bindProps from '../utils/bind-props.js';
 import { bindEvents, unbindEvents } from '../utils/bind-events.js';
 import __vue_component__$1 from './MapboxPopup.js';
 import { n as normalizeComponent } from '../_chunks/normalize-component.d57baabe.js';
+import '../_chunks/_commonjsHelpers.04bfb82e.js';
 
 var _excluded = ["lngLat", "popup"];
 /**
@@ -29,7 +30,7 @@ var props = {
     default: null
   },
   offset: {
-    type: [Point, Array],
+    type: [maplibreGl.Point, Array],
     default: null
   },
   anchor: {
@@ -104,7 +105,7 @@ var script = {
     }
   },
   mounted: function mounted() {
-    this.marker = new Marker(this.options).setLngLat(this.lngLat).addTo(this.map); // Bind props and events
+    this.marker = new maplibreGl.Marker(this.options).setLngLat(this.lngLat).addTo(this.map); // Bind props and events
 
     bindProps(this, this.marker, props);
     bindEvents(this, this.marker, events);

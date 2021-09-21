@@ -1,7 +1,8 @@
-import { NavigationControl } from 'maplibre-gl';
+import { m as maplibreGl } from '../_chunks/maplibre-gl.b420778b.js';
 import bindProps from '../utils/bind-props.js';
 import { injectMap } from '../mixins/provide-inject-map.js';
 import { n as normalizeComponent } from '../_chunks/normalize-component.d57baabe.js';
+import '../_chunks/_commonjsHelpers.04bfb82e.js';
 
 //
 /**
@@ -34,7 +35,7 @@ var script = {
   mixins: [injectMap()],
   props: props,
   mounted: function mounted() {
-    this.control = new NavigationControl(this.$props);
+    this.control = new maplibreGl.NavigationControl(this.$props);
     bindProps(this, this.control, props);
     this.map.addControl(this.control, this.position);
   },

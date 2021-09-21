@@ -1,16 +1,17 @@
 import { c as _asyncToGenerator, a as _objectWithoutProperties, b as _objectSpread2 } from '../../_chunks/_rollupPluginBabelHelpers.c63527b4.js';
-import { r as regenerator } from '../../_chunks/index.c9a38489.js';
+import { r as regenerator } from '../../_chunks/index.d84f178f.js';
 import __vue_component__$2 from '../MapboxCluster.js';
 import __vue_component__$3 from '../MapboxGeocoder.js';
 import __vue_component__$4 from '../MapboxMap.js';
 import { n as normalizeComponent } from '../../_chunks/normalize-component.d57baabe.js';
+import '../../_chunks/_commonjsHelpers.04bfb82e.js';
 import '../../utils/uniq-id.js';
 import '../../mixins/provide-inject-map.js';
 import '../MapboxLayer.js';
 import '../../utils/bind-events.js';
 import '../MapboxSource.js';
-import 'maplibre-gl';
-import '@maplibre/maplibre-gl-geocoder';
+import '../../_chunks/maplibre-gl.b420778b.js';
+import 'events';
 import '../../utils/bind-props.js';
 
 //
