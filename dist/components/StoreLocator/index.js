@@ -10,7 +10,7 @@ import '../../mixins/provide-inject-map.js';
 import '../MapboxLayer.js';
 import '../../utils/bind-events.js';
 import '../MapboxSource.js';
-import '../../_chunks/maplibre-gl.b420778b.js';
+import '../../_chunks/maplibre-gl.1a7f3a3e.js';
 import '@mapbox/mapbox-gl-geocoder';
 import '../../utils/bind-props.js';
 

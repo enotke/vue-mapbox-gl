@@ -1,5 +1,5 @@
 import { a as _objectWithoutProperties, b as _objectSpread2 } from '../_chunks/_rollupPluginBabelHelpers.c63527b4.js';
-import { m as maplibreGl } from '../_chunks/maplibre-gl.b420778b.js';
+import { m as maplibreGl } from '../_chunks/maplibre-gl.1a7f3a3e.js';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import { injectMap } from '../mixins/provide-inject-map.js';
 import { bindEvents, unbindEvents } from '../utils/bind-events.js';

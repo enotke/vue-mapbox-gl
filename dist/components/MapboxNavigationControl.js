@@ -1,4 +1,4 @@
-import { m as maplibreGl } from '../_chunks/maplibre-gl.b420778b.js';
+import { m as maplibreGl } from '../_chunks/maplibre-gl.1a7f3a3e.js';
 import bindProps from '../utils/bind-props.js';
 import { injectMap } from '../mixins/provide-inject-map.js';
 import { n as normalizeComponent } from '../_chunks/normalize-component.d57baabe.js';
